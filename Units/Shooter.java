@@ -1,10 +1,10 @@
 package Units;
-public class Shooter extends soop_1{
+public abstract class Shooter extends Player{
     
     protected int distance, maxcountBullet, currentcountBullet;
     protected float accuracy;
     
-    Shooter(String name, float hp, float luck, int speed, int damage, int distance, int maxcountBullet, float accuracy){
+    Shooter(String name, float hp, float luck, int speed, int damage, int distance, int maxcountBullet, float accuracy, int i){
         super(name, hp, luck, speed, damage);
         this.distance = distance;
         this.maxcountBullet = maxcountBullet;

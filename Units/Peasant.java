@@ -1,11 +1,21 @@
 package Units;
-public class Peasant extends soop_1{
-    Peasant(String name) {
-        super(name, 10, 0,5, 1);
+public class Peasant extends Player{
+    public Peasant(String name) {
+        super(name, 10, 0,1, 10, 5);
     }
     
     @Override
     public String toString() {
+        return name;
+    }
+
+    @Override
+    public void step() {
+       
+    }
+
+    @Override
+    public String getInfo() {
         return name;
     }
 

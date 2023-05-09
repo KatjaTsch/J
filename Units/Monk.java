@@ -1,16 +1,15 @@
 package Units;
-public class Monk extends Magican{
-        
-   Monk(String name) {
+
+public class Monk extends Magican {
+
+  public Monk(String name) {
     super(name, 20, 0,6, 1, 2, 20);
-    }
+  }
 
-    void Heal(){
+  void Heal() {}
 
-    }
-    
-    @Override
-    public String toString() {
-        return name;
-    }
+  @Override
+  public String toString() {
+    return name;
+  }
 }
