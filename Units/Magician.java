@@ -7,7 +7,7 @@ public abstract class Magician extends Player {
 
   protected float mana;
 
-  Magician(
+  protected Magician(int initiative,
     ArrayList<Player> team,
     String name,
     float hp,
@@ -16,7 +16,7 @@ public abstract class Magician extends Player {
     int[] damage,
     float mana
   ) {
-    super(team, name, hp, luck, speed, damage, mana);
+    super(initiative, team, name, hp, luck, speed, damage, mana);
     this.mana = mana;
   }
 

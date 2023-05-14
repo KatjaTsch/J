@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 public class Peasant extends Player {
 
+ 
   public Peasant(ArrayList<Player> team, String name) {
-    super(team, name, 8, 9, 10, new int[] { 1, 2 }, 4);
+    super(1, team, name, 8, 9, 10, new int[] { 1, 2 }, 4);
   }
 
   @Override
@@ -16,5 +17,11 @@ public class Peasant extends Player {
   @Override
   public String getInfo() {
     return name;
+  }
+
+  @Override
+  public void step() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'step'");
   }
 }

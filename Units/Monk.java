@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Monk extends Magician {
 
   public Monk(ArrayList<Player> team, String name) {
-    super(team, name, 13, 2, 10, new int[] { 1, 2 }, 5);
+    super(3, team, name, 13, 2, 10, new int[] { 1, 2 }, 5);
   }
 
   void Heal() {}

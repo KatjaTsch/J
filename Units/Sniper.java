@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Sniper extends Shooter {
 
   public Sniper(ArrayList<Player> team, String name) {
-    super(team, name, 5, 6, 7, new int[]{1, 2}, 9, 10, 15, 5, 8);
+    super(6, team, name, 5, 6, 7, new int[]{1, 2}, 9, 10, 15, 5, 8);
   }
 
   @Override

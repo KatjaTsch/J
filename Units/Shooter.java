@@ -7,7 +7,7 @@ public abstract class Shooter extends Player {
   protected int distance, maxcountBullet, currentcountBullet;
   protected float accuracy;
 
-  public Shooter(
+  public Shooter(int initiative,
     ArrayList<Player> team2,
     String name2,
     float hp2,
@@ -20,7 +20,7 @@ public abstract class Shooter extends Player {
     int currentcountBullet,
     float accuracy
   ) {
-    super(team2, name2, hp2, luck2, speed2, damage2, mana);
+    super(initiative, team2, name2, hp2, luck2, speed2, damage2, mana);
     this.distance = distance;
     this.maxcountBullet = maxcountBullet;
     this.currentcountBullet = currentcountBullet;
