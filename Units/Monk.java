@@ -1,9 +1,11 @@
 package Units;
 
-public class Monk extends Magican {
+import java.util.ArrayList;
 
-  public Monk(String name) {
-    super(name, 20, 0,6, 1, 2, 20);
+public class Monk extends Magician {
+
+  public Monk(ArrayList<Player> team, String name) {
+    super(team, name, 13, 2, 10, new int[] { 1, 2 }, 5);
   }
 
   void Heal() {}
@@ -11,5 +13,10 @@ public class Monk extends Magican {
   @Override
   public String toString() {
     return name;
+  }
+
+  @Override
+  public String getInfo() {
+    return String.format("%s mana: %d  luck", super.getInfo());
   }
 }

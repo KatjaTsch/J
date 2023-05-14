@@ -1,9 +1,13 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Thief extends Player {
 
-  public Thief(String name) {
-    super(name, 20, 0,8, 3, 8);
+  
+
+  public Thief(ArrayList<Player> team, String name){
+    super(team, name, 8, 2, 3, new int []{1,2}, 10);
   }
 
   void dodge() {}
@@ -30,6 +34,5 @@ public class Thief extends Player {
     );
   }
 
-  @Override
-  public void step() {}
+  
 }

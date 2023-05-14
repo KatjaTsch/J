@@ -1,14 +1,14 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Crossbowman extends Shooter {
 
-  public Crossbowman(String name) {
-    super(name, 20, 0, 5, 2, 2, 2, 50, 40);
+  public Crossbowman(ArrayList<Player> team, String name) {
+    super(team, name, 5, 6, 7, new int[] { 1, 2 }, 9, 10, 15, 5, 8);
   }
 
-  
-
-@Override
+  @Override
   public String toString() {
     return "Лучник";
   }
@@ -33,7 +33,4 @@ public class Crossbowman extends Shooter {
       accuracy
     );
   }
-
-  @Override
-  public void step() {}
 }

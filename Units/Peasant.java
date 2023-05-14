@@ -1,22 +1,20 @@
 package Units;
-public class Peasant extends Player{
-    public Peasant(String name) {
-        super(name, 10, 0,1, 10, 5);
-    }
-    
-    @Override
-    public String toString() {
-        return name;
-    }
 
-    @Override
-    public void step() {
-       
-    }
+import java.util.ArrayList;
 
-    @Override
-    public String getInfo() {
-        return name;
-    }
+public class Peasant extends Player {
 
+  public Peasant(ArrayList<Player> team, String name) {
+    super(team, name, 8, 9, 10, new int[] { 1, 2 }, 4);
+  }
+
+  @Override
+  public String toString() {
+    return name;
+  }
+
+  @Override
+  public String getInfo() {
+    return name;
+  }
 }

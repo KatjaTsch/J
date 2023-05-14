@@ -1,9 +1,11 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Sniper extends Shooter {
 
-  public Sniper(String name) {
-    super(name, 20, 0,6, 2, 4, 5, 10, 30);
+  public Sniper(ArrayList<Player> team, String name) {
+    super(team, name, 5, 6, 7, new int[]{1, 2}, 9, 10, 15, 5, 8);
   }
 
   @Override
