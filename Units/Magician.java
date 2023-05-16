@@ -14,9 +14,9 @@ public abstract class Magician extends Player {
     float luck,
     int speed,
     int[] damage,
-    float mana
+    float mana, int x, int y
   ) {
-    super(initiative, team, name, hp, luck, speed, damage, mana);
+    super(initiative, team, name, hp, luck, speed, damage, mana, x, y);
     this.mana = mana;
   }
 
@@ -25,7 +25,7 @@ public abstract class Magician extends Player {
   }
 
   @Override
-  public void step() {
+  public void step(ArrayList<Player> team1) {
     int index_demaget = 0;
     for (int i = 0; i < team.size(); i++) {
       for (int j = 0; j < team.size() - 1; j++) {

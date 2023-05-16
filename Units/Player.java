@@ -9,7 +9,7 @@ import java.util.Random;
 8 полей
 4 метода*/
 
-public abstract class Player implements GameInterface, Comparable {
+public abstract class Player implements GameInterface {
 
   protected int initiative;
   protected String name;
@@ -23,6 +23,8 @@ public abstract class Player implements GameInterface, Comparable {
   }
 
   protected ArrayList<Player> team;
+  protected Coordinate coordinate;
+  protected ArrayList<Player> enemy;
 
   protected Player(
     int initiative,
@@ -32,7 +34,7 @@ public abstract class Player implements GameInterface, Comparable {
     float luck,
     float maxhp,
     int[] damage,
-    int speed
+    float mana, int speed, int x, int y
   ) {
     this.team = team;
     this.name = name;
@@ -43,6 +45,7 @@ public abstract class Player implements GameInterface, Comparable {
     this.speed = speed;
     this.damage = damage;
     this.initiative = initiative;
+    this.coordinate = new Coordinate(x, y);
   }
 
   public String getInfo() {
@@ -82,17 +85,21 @@ public abstract class Player implements GameInterface, Comparable {
   ) {}
 
   public Player(
-    ArrayList<Player> team2,
+    int initiative2, ArrayList<Player> team2,
     String name2,
     float hp2,
     float luck2,
     int speed2,
     int[] damage2,
-    float mana
+    float mana, int x, int y, int i
   ) {}
 
   public Player(int initiative2, ArrayList<Player> team2, String name2, float hp2, float luck2, int speed2,
       int[] damage2, float mana) {
+  }
+
+  public Player(int initiative2, ArrayList<Player> team2, String name2, float hp2, 
+  float luck2, int speed2, int[] damage2, float mana, int x, int y) {
   }
 
   void attack() {}
@@ -106,16 +113,16 @@ public abstract class Player implements GameInterface, Comparable {
   void dead() {}
 
   @Override
-  public void step() {
+  public void step(ArrayList<Player> team1) {
     
     
   }
 
-  @Override
-  public int compareTo(Object o) {
-    Player player = (Player)o;
-    return player.initiative-this.initiative; 
-  }
+  // @Override
+  // public int compareTo(Object o) {
+  //   Player player = (Player)o;
+  //   return player.initiative-this.initiative; 
+  // }
 
  
 }

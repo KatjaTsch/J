@@ -6,8 +6,8 @@ public class Thief extends Player {
 
   
 
-  public Thief(ArrayList<Player> team, String name){
-    super(2, team, name, 8, 2, 3, new int []{1,2}, 10);
+  public Thief(ArrayList<Player> team, String name, int x, int y){
+    super(2, team, name, 8, 2, 3, new int []{1,2}, 10, x, y);
   }
 
   void dodge() {}
@@ -35,7 +35,7 @@ public class Thief extends Player {
   }
 
   @Override
-  public void step() {
+  public void step(ArrayList<Player> team1) {
     throw new UnsupportedOperationException("Unimplemented method 'step'");
   }
 

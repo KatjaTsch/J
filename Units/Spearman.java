@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Spearman extends Player{
     
-    public Spearman(ArrayList<Player> team, String name){
-        super(3, team, name, 30, 21, 6, new int[]{1,2}, 2);
+    public Spearman(ArrayList<Player> team, String name, int x, int y){
+        super(3, team, name, 30, 21, 6, new int[]{1,2}, 2, x, y);
     }
     @Override
     public String toString() {
@@ -18,7 +18,7 @@ public class Spearman extends Player{
     + " ущерб: " + damage + "инициатива" + initiative;
     }
     @Override
-    public void step() {
+    public void step(ArrayList<Player> team1) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'step'");
     }

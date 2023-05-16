@@ -1,8 +1,10 @@
 package Units;
 
-public interface GameInterface{
-void step();
+import java.util.ArrayList;
 
-String getInfo();
+public interface GameInterface {
+  
+void step(ArrayList<Player> team1);
 
+  String getInfo();
 }
