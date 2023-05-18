@@ -6,6 +6,7 @@ import Units.Thief;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Random;
+import java.util.Scanner;
 
 public class main {
 
@@ -14,7 +15,7 @@ public class main {
   public static ArrayList<Player> team2 = new ArrayList<>();
   public static ArrayList<Player> team3 = new ArrayList<>();
 
-  public static void main (String[] args) {
+  public static void main(String[] args) {
     // Sniper sniper = new Sniper(team1, "Kate");
     // System.out.println(sniper.getInfo());
 
@@ -90,8 +91,15 @@ public class main {
       }
     );
 
-    while(true){
-      System.out.println(View.view());
+    Scanner sc = new Scanner(System.in);
+    while (true) {
+      View.view();
+      sc.nextLine();
+      for (Player player : team3) {
+        if (team1.contains(player)) {
+          player.step(team2);
+        } else player.step(team1);
+      }
     }
   }
 }
